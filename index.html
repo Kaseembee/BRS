@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <div class="container">
+        <h1>Bank Reconciliation Statement</h1>
+
+        <div class="form-container">
+            <h2>Enter Bank and Book Balances</h2>
+            <form id="reconciliation-form">
+                <label for="bankBalance">Bank Balance</label>
+                <input type="number" id="bankBalance" placeholder="Enter Bank Balance" required>
+
+                <label for="bookBalance">Book Balance</label>
+                <input type="number" id="bookBalance" placeholder="Enter Book Balance" required>
+
+                <label for="transactions">Enter Transactions (comma separated)</label>
+                <input type="text" id="transactions" placeholder="e.g., -50, 100, -30">
+
+                <button type="submit">Calculate Reconciliation</button>
+            </form>
+        </div>
+
+        <div id="result" class="result-container" style="display: none;">
+            <h2>Reconciliation Result</h2>
+            <p id="bankResult">Bank Balance after adjustments: <span></span></p>
+            <p id="bookResult">Book Balance after adjustments: <span></span></p>
+            <p id="discrepancy">Discrepancy between Bank and Book: <span></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
